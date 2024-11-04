@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML5 Boilerplate</title>
+  <link rel="stylesheet" href="{% static 'style.css'%}"/>
+</head>
+
+<body>
+  <img src = "{% static 'img.jpg' %}"/>
+  <h1>This is Contact Page</h1>
+  <h1><a href='/'>Home</a></h1>
+  <h1><a href='/first_app/about/'>About</a></h1>
+  <script src="scripts.js"></script>
+  <h1>Age: {{age}}</h1>
+
+  {% if age > 20 %}
+  <h3>You are selected</h3>
+  {%endif%}
+
+  {% for i in marks %}
+  <h6>{{i.score}}</h6>
+  {%endfor%}
+</body>
+
+</html>
